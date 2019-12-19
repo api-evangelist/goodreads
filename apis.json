@@ -1,0 +1,83 @@
+{
+    "name": "Goodreads",
+    "description": "<p>Goodreads is a world&rsquo;s largest site for book readers and recommendations.&nbsp; As of December 2011, Goodreads has more than 6,700,000 members who have added more than 230,000,000 books to their shelves. A home for casual readers and bona-fide bookworms alike, Goodreads users recommend books, compare what they are reading, keep track of what they&rsquo;ve read and would like to read, find their next favorite book, form book clubs and much more. Goodreads was launched in January 2007.<\/p>",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/415-goodreads.jpg",
+    "tags": [
+        "api provider",
+        "books",
+        "have api",
+        "marketplaces",
+        "reviews"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/goodreads\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Goodreads",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/415-goodreads.jpg",
+            "humanURL": "http:\/\/www.goodreads.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/goodreads-openapi.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/goodreads-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/www.goodreads.com\/"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/www.goodreads.com\/blog"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "http:\/\/www.goodreads.com\/blog\/list_rss.xml"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/goodreads"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/goodreads"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/www.goodreads.com\/api"
+        },
+        {
+            "type": "Email",
+            "url": "press@goodreads.com"
+        },
+        {
+            "type": "Email",
+            "url": "copyright@goodreads.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/goodreads"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/goodreads"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/www.goodreads.com"
+        }
+    ]
+}
