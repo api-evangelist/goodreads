@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.goodreads.com/.well-known/openid-configuration
+docs: https://www.goodreads.com/api
+summary:
+  types: [openIdConnect, oauth1]
+  api_key_in: [query]
+  oauth2_flows: []
+  notes: >-
+    No OpenAPI is published for Goodreads, so this profile is searched from
+    the live OpenID Connect discovery document and the (now-retired) public
+    developer API documentation rather than derived from a spec.
+schemes:
+- name: OpenIDConnect
+  type: openIdConnect
+  openIdConnectUrl: https://www.goodreads.com/.well-known/openid-configuration
+  issuer: https://www.goodreads.com
+  authorization_endpoint: https://www.goodreads.com/open_id/auth_token
+  jwks_uri: https://www.goodreads.com/open_id/keys
+  response_types_supported: [code, token]
+  id_token_signing_alg_values_supported: [RS256]
+  sources: [well-known/goodreads-openid-configuration.json]
+  description: >-
+    OpenID Connect discovery for signing in with a Goodreads account.
+- name: LegacyDeveloperKey
+  type: apiKey
+  in: query
+  parameter: key
+  status: retired
+  sources: [https://www.goodreads.com/api]
+  description: >-
+    The legacy public Goodreads REST/XML API authenticated public reads with
+    a developer `key` query parameter and used OAuth 1.0a for user-scoped
+    calls. Goodreads stopped issuing new developer keys on 2020-12-08 (see
+    lifecycle); kept here for historical accuracy, not as an available scheme.
+- name: LegacyOAuth1
+  type: oauth1
+  status: retired
+  sources: [https://www.goodreads.com/api]
+  description: >-
+    OAuth 1.0a user authorization used by the retired public developer API for
+    member-scoped operations (shelves, reviews). No longer accepting new apps.
