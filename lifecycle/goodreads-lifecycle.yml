@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://help.goodreads.com/s/article/Does-Goodreads-support-the-use-of-APIs
+status: retired
+summary: >-
+  Goodreads (an Amazon company) retired its public developer API program. As of
+  2020-12-08 it stopped issuing new developer keys and announced it would retire
+  the existing API. Access was disabled for keys unused for more than 30 days.
+  Remaining integrations run on legacy keys that meet the API Terms of Service;
+  no new public API is offered and there is no published versioning policy.
+versioning:
+  scheme: none-current
+  current: null
+  docs: https://www.goodreads.com/api
+  notes: The legacy XML API was unversioned (per-endpoint under /api).
+deprecation:
+  policy_url: https://help.goodreads.com/s/article/Does-Goodreads-support-the-use-of-APIs
+  announced: '2020-12-08'
+  sunset_header: false
+  notes: >-
+    New developer key issuance halted 2020-12-08; keys idle >30 days disabled.
+    Goodreads has not committed a hard shutdown date for remaining active users.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []
+references:
+- https://www.goodreads.com/topic/show/21788520-api-deprecation
+- https://developers.slashdot.org/story/20/12/17/1522242/goodreads-is-retiring-its-current-api-and-book-loving-developers-arent-happy

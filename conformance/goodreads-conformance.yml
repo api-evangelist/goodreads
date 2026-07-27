@@ -1,0 +1,21 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.goodreads.com/.well-known/openid-configuration
+standards:
+- id: openid-connect-discovery
+  conforms: true
+  evidence: >-
+    /.well-known/openid-configuration returns a valid OIDC discovery document
+    (issuer, authorization_endpoint, jwks_uri, RS256) for Goodreads account login.
+- id: oauth1
+  conforms: true
+  evidence: Legacy public developer API used OAuth 1.0a for member-scoped calls (retired).
+- id: oauth2
+  conforms: false
+  evidence: No RFC 8414 oauth-authorization-server metadata; no oauth2 flows published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No OpenAPI or problem+json error surface published.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404.

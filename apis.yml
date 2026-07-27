@@ -1,9 +1,30 @@
 aid: goodreads
 name: Goodreads
-description: 'Goodreads is a company surfaced as a portfolio company of true-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: consumer. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Goodreads is the world's largest site for readers and book recommendations,
+  where members catalog and shelve books, rate and review them, track their
+  reading progress, join reader groups, and receive personalized
+  recommendations. Owned by Amazon since 2013, it originated as a portfolio
+  company of True Ventures. Goodreads formerly operated a public developer API
+  (XML over HTTP, authenticated with a developer key and OAuth 1.0a) that
+  powered many third-party reading apps, but on 2020-12-08 it stopped issuing
+  new developer keys and began retiring the program; there is no current public
+  API. Goodreads still exposes a live OpenID Connect discovery document for
+  account sign-in. This profile is enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/goodreads/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://s.gr-assets.com/assets/icons/goodreads_icon_100x100-4a7d81b31d932cfc0be621ee15a14e70.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +33,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Consumer
+- Books
+- Reading
+- Social Network
+- Recommendations
+- Reviews
+- Amazon
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -25,3 +52,38 @@ maintainers:
 common:
 - type: Website
   url: https://www.goodreads.com/
+- type: APIReference
+  url: https://www.goodreads.com/api
+- type: Documentation
+  url: https://help.goodreads.com/s/article/Does-Goodreads-support-the-use-of-APIs
+- type: Support
+  url: https://help.goodreads.com/s/
+- type: Blog
+  url: https://www.goodreads.com/blog
+- type: SignUp
+  url: https://www.goodreads.com/user/sign_up
+- type: Login
+  url: https://www.goodreads.com/user/sign_in
+- type: TermsOfService
+  url: https://www.goodreads.com/about/terms
+- type: PrivacyPolicy
+  url: https://www.goodreads.com/about/privacy
+- type: Authentication
+  url: authentication/goodreads-authentication.yml
+- type: WellKnown
+  url: well-known/goodreads-well-known.yml
+- type: Lifecycle
+  url: lifecycle/goodreads-lifecycle.yml
+- type: Deprecation
+  url: https://help.goodreads.com/s/article/Does-Goodreads-support-the-use-of-APIs
+- type: Conformance
+  url: conformance/goodreads-conformance.yml
+- type: DomainSecurity
+  url: security/goodreads-domain-security.yml
+- type: LLMsTxt
+  url: llms/goodreads-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
