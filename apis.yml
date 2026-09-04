@@ -25,15 +25,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://s.gr-assets.com/assets/icons/goodreads_icon_100x100-4a7d81b31d932cfc0be621ee15a14e70.png
 x-type: company
