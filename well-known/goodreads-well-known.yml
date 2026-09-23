@@ -2,21 +2,25 @@ generated: '2026-07-19'
 method: searched
 source: live probes of https://www.goodreads.com/.well-known/*
 host: https://www.goodreads.com
-documents:
-- path: /.well-known/openid-configuration
-  status: 200
-  file: goodreads-openid-configuration.json
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 404
-- path: /.well-known/ai-plugin.json
-  status: 404
-notes: >-
-  Goodreads publishes a real OpenID Connect discovery document at
-  /.well-known/openid-configuration (issuer https://www.goodreads.com,
-  authorization_endpoint /open_id/auth_token, jwks_uri /open_id/keys,
-  RS256). No security.txt, RFC 8414 metadata, API catalog, or AI plugin
-  manifest are published.
+notes: Goodreads publishes a real OpenID Connect discovery document at /.well-known/openid-configuration
+  (issuer https://www.goodreads.com, authorization_endpoint /open_id/auth_token, jwks_uri /open_id/keys,
+  RS256). No security.txt, RFC 8414 metadata, API catalog, or AI plugin manifest are published.
+hosts:
+- host: https://www.goodreads.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: goodreads-openid-configuration.json
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
